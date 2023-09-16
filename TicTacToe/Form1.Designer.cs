@@ -32,8 +32,8 @@
             this.onePlayer = new System.Windows.Forms.CheckBox();
             this.OutputText = new System.Windows.Forms.RichTextBox();
             this.CrossCB = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.GameField = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.GameField)).BeginInit();
             this.SuspendLayout();
             // 
             // BeginAgainBtn
@@ -79,29 +79,30 @@
             this.CrossCB.Text = "Играть крестиком";
             this.CrossCB.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // GameField
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 80);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 300);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
+            this.GameField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GameField.Location = new System.Drawing.Point(48, 80);
+            this.GameField.Name = "GameField";
+            this.GameField.Size = new System.Drawing.Size(300, 300);
+            this.GameField.TabIndex = 4;
+            this.GameField.TabStop = false;
+            this.GameField.Paint += new System.Windows.Forms.PaintEventHandler(this.GameField_Paint);
+            this.GameField.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(404, 566);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.GameField);
             this.Controls.Add(this.CrossCB);
             this.Controls.Add(this.OutputText);
             this.Controls.Add(this.onePlayer);
             this.Controls.Add(this.BeginAgainBtn);
             this.Name = "Form1";
             this.Text = "Крестики-нолики";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GameField)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,7 +114,7 @@
         private System.Windows.Forms.CheckBox onePlayer;
         private System.Windows.Forms.RichTextBox OutputText;
         private System.Windows.Forms.CheckBox CrossCB;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox GameField;
     }
 }
 

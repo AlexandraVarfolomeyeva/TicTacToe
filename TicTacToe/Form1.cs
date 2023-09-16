@@ -17,6 +17,25 @@ namespace TicTacToe
             InitializeComponent();
         }
 
+        private void DrawField()
+        {
+            Graphics g = GameField.CreateGraphics();
+            Pen p = new Pen(Color.Black);
+            Point p1 = new Point(0, GameField.Size.Height/3);
+            Point p2 = new Point(GameField.Size.Width, GameField.Size.Height / 3);
+            g.DrawLine(p, p1, p2);
+            p1 = new Point(0, GameField.Size.Height / 3 * 2);
+            p2 = new Point(GameField.Size.Width, GameField.Size.Height / 3 * 2);
+            g.DrawLine(p, p1, p2);
+
+            p1 = new Point(GameField.Size.Width / 3, 0);
+            p2 = new Point(GameField.Size.Width / 3, GameField.Size.Height);
+            g.DrawLine(p, p1, p2);
+            p1 = new Point(GameField.Size.Width / 3 * 2, 0);
+            p2 = new Point(GameField.Size.Width / 3 * 2, GameField.Size.Height);
+            g.DrawLine(p, p1, p2);
+        }
+
         private void onePlayer_CheckedChanged(object sender, EventArgs e)
         {
             if (onePlayer.Checked == true)
@@ -39,6 +58,11 @@ namespace TicTacToe
         {
             //check fot the coordinates
             OutputText.Text = e.Location.X + ", " + e.Location.Y;
+        }
+
+        private void GameField_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }
