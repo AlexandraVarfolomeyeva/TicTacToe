@@ -34,5 +34,11 @@ namespace TicTacToe
             //ask if sure
             //clean the matrix
         }
+
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            //check fot the coordinates
+            OutputText.Text = e.Location.X + ", " + e.Location.Y;
+        }
     }
 }

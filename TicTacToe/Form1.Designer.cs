@@ -30,13 +30,15 @@
         {
             this.BeginAgainBtn = new System.Windows.Forms.Button();
             this.onePlayer = new System.Windows.Forms.CheckBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.OutputText = new System.Windows.Forms.RichTextBox();
             this.CrossCB = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BeginAgainBtn
             // 
-            this.BeginAgainBtn.Location = new System.Drawing.Point(608, 8);
+            this.BeginAgainBtn.Location = new System.Drawing.Point(208, 16);
             this.BeginAgainBtn.Name = "BeginAgainBtn";
             this.BeginAgainBtn.Size = new System.Drawing.Size(184, 32);
             this.BeginAgainBtn.TabIndex = 0;
@@ -57,13 +59,13 @@
             this.onePlayer.UseVisualStyleBackColor = true;
             this.onePlayer.CheckedChanged += new System.EventHandler(this.onePlayer_CheckedChanged);
             // 
-            // richTextBox1
+            // OutputText
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(208, 96);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(288, 216);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.OutputText.Location = new System.Drawing.Point(8, 392);
+            this.OutputText.Name = "OutputText";
+            this.OutputText.Size = new System.Drawing.Size(384, 168);
+            this.OutputText.TabIndex = 2;
+            this.OutputText.Text = "";
             // 
             // CrossCB
             // 
@@ -77,17 +79,29 @@
             this.CrossCB.Text = "Играть крестиком";
             this.CrossCB.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(48, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(300, 300);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(404, 566);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.CrossCB);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.OutputText);
             this.Controls.Add(this.onePlayer);
             this.Controls.Add(this.BeginAgainBtn);
             this.Name = "Form1";
             this.Text = "Крестики-нолики";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,8 +111,9 @@
 
         private System.Windows.Forms.Button BeginAgainBtn;
         private System.Windows.Forms.CheckBox onePlayer;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox OutputText;
         private System.Windows.Forms.CheckBox CrossCB;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
