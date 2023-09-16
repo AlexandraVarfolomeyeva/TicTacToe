@@ -16,5 +16,23 @@ namespace TicTacToe
         {
             InitializeComponent();
         }
+
+        private void onePlayer_CheckedChanged(object sender, EventArgs e)
+        {
+            if (onePlayer.Checked == true)
+            {
+                CrossCB.Visible = true;
+            }
+            else
+            {
+                CrossCB.Visible = false;
+            }
+        }
+
+        private void BeginAgainBtn_Click(object sender, EventArgs e)
+        {
+            //ask if sure
+            //clean the matrix
+        }
     }
 }
